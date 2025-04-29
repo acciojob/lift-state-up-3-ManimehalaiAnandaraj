@@ -9,7 +9,7 @@ const App = () => {
     setSelectedOption(option);
   }
   return (
-    <div>
+    <div className="parent">
        <h2>Parent Component</h2>
        <div className="child1">
         <h3>Child Component</h3>
@@ -19,7 +19,7 @@ const App = () => {
        <h3>Child Component</h3>
        <ChildComponent option = "Option 2" onOptionClick = {handleOptionClick}></ChildComponent> 
        </div>
-       <p>selectedOption: {selectedOption}</p>
+       <p>selected Option: {selectedOption}</p>
     </div>
   )
 }
@@ -29,7 +29,6 @@ function ChildComponent({option,onOptionClick})
   return(
     <div>
       <button onClick={() =>onOptionClick(option)}>{option}</button>
-
     </div>
   )
 }
